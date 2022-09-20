@@ -100,11 +100,6 @@ p{
   margin-left: 93px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--logo-color);
-}
-
 .site-nav .item-list:not(:last-child) {
   margin-right: 50px;
 }
@@ -148,6 +143,15 @@ p{
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14; 
+
+  transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.link:hover,
+.link:focus {
+  color: var(--logo-color);
 }
 
 .auth-nav {
@@ -175,6 +179,10 @@ p{
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
+
+  transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .envelope{
@@ -256,11 +264,14 @@ text-align: center;
  }
  
 .close-btn{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   margin-left: auto;
   
+  background-color: var(--nav-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
@@ -280,6 +291,10 @@ text-align: center;
   font-weight: 700;
   line-height: 1.87;
   cursor: pointer;
+
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -436,9 +451,13 @@ text-align: center;
 .icon-shape{
   display: flex;
   justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  transition-duration: 5000ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item{
@@ -483,12 +502,20 @@ text-align: center;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--icons-color);
-    border-radius: 4px;
+  border-radius: 4px;
+
+  transition-duration: 2500ms;
+  transition-property: border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .icon-logo{
   display: block;
   fill: var(--icons-color);
+
+  transition-duration: 2500ms;
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .icon-logo,
@@ -589,6 +616,10 @@ text-align: center;
   color: var(--nav-color);
   background-color: rgba(255, 255, 255, 0.1);;
   border-radius: 50%;
+
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .avatar-item{
@@ -627,6 +658,9 @@ text-align: center;
   cursor: pointer;
 
   padding: 6px 22px;
+  transition-duration: 250ms;
+  transition-property: background-color, color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .click:hover,
@@ -696,6 +730,10 @@ opacity: 1;
 .visit {
   text-decoration: none;
   display: block;
+
+  transition-duration: 250ms;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link .visit:hover,
