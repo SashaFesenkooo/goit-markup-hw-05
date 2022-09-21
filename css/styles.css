@@ -144,9 +144,7 @@ p{
   font-weight: 500;
   line-height: 1.14; 
 
-  transition-duration: 250ms;
-  transition-property: color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .link:hover,
@@ -163,11 +161,6 @@ p{
   margin-right: 50px;
 }
 
-.auth-nav .copy:hover,
-.auth-nav .copy:focus {
-  color: var(--logo-color);
-}
-
 .copy {
   display: inline-flex;
   align-items: center;
@@ -180,9 +173,12 @@ p{
   font-weight: 500;
   line-height: 1.14;
 
-  transition-duration: 250ms;
-  transition-property: color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.copy:hover,
+.copy:focus {
+  color: var(--logo-color);
 }
 
 .envelope{
@@ -292,9 +288,7 @@ text-align: center;
   line-height: 1.87;
   cursor: pointer;
 
-  transition-duration: 250ms;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -455,9 +449,8 @@ text-align: center;
   width: 44px;
   height: 44px;
 
-  transition-duration: 250ms;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+             border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item{
@@ -504,9 +497,7 @@ text-align: center;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
 
-  transition-duration: 250ms;
-  transition-property: border-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-logo{
@@ -557,6 +548,8 @@ text-align: center;
   line-height: 1.7;
 
   display: inline-block;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text:hover,
@@ -571,7 +564,8 @@ text-align: center;
   font-size: 14px;
   line-height: 1.7;
   display: inline-block;
-  margin-bottom: 9px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .copyright:last-child{
@@ -617,9 +611,7 @@ text-align: center;
   background-color: rgba(255, 255, 255, 0.1);;
   border-radius: 50%;
 
-  transition-duration: 250ms;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .avatar-item{
@@ -658,9 +650,9 @@ text-align: center;
   cursor: pointer;
 
   padding: 6px 22px;
-  transition-duration: 250ms;
-  transition-property: background-color, color, box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .click:hover,
@@ -679,28 +671,34 @@ text-align: center;
 
 .project-link{
   width: calc((100% - 60px) / 3);
+  
 }
 
 .wrapper{
   position: relative;
+  overflow: hidden;
 }
 
-.wrapper::before{
-  content: '';
+.overlay{
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
-  width: 100%;  
+  width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+  
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
-.wrapper:hover::before{
-  opacity: 1;
+.visit:hover .overlay,
+.visit:focus .overlay{
+  transform: translateY(0);
 }
 
-.wrapper:hover .wrapper-list{
+.visit:hover .wrapper-list,
+.visit:focus .wrapper-list{
 opacity: 1;
 }
 
@@ -730,14 +728,11 @@ opacity: 1;
 .visit {
   text-decoration: none;
   display: block;
-
-  transition-duration: 250ms;
-  transition-property: box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
-.project-link .visit:hover,
-.project-link .visit:focus{
+.visit:hover,
+.visit:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
       0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
