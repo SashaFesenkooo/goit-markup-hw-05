@@ -184,18 +184,26 @@ p{
 .envelope{
   margin-right: 10px;
   fill: var(--second-font-color);
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.copy:hover .envelope{
+/* .envelope:hover{
+  fill: var(--logo-color);
+} */
+
+.copy:hover .envelope,
+.copy:focus .envelope{
   fill: var(--logo-color);
 }
 
 .smartphone{
   margin-right: 10px;
   fill: var(--second-font-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.copy:hover .smartphone{
+.copy:hover .smartphon,
+.copy:focus .smartphone{
   fill: var(--logo-color);
 }
 
@@ -258,6 +266,10 @@ text-align: center;
 
   background-color: var(--nav-color);
  }
+
+ .backdrop {
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
  
 .close-btn{
   display: flex;
@@ -294,10 +306,6 @@ text-align: center;
 .btn:hover,
 .btn:focus {
   background-color: var(--logo-secondary-color);
-}
-
-.backdrop{
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
                                   /* One Section */
@@ -452,6 +460,7 @@ text-align: center;
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 
  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
              border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
