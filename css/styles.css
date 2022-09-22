@@ -296,6 +296,10 @@ text-align: center;
   background-color: var(--logo-secondary-color);
 }
 
+.backdrop{
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
                                   /* One Section */
 
 .visually-hidden {
