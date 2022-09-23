@@ -459,8 +459,8 @@ text-align: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
- transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
              border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -471,7 +471,7 @@ text-align: center;
 .icon-shape:hover,
 .icon-shape:focus{
   background-color: var(--logo-color);
-  border-radius: 50%;
+  
 }
 
 .shape-item{
